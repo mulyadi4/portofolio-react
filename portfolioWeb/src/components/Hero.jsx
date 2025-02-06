@@ -90,7 +90,7 @@ function Hero() {
          <h3 className='bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text 
        text-transparent  text-5xl font-light md:text-7xl '>Web Developer</h3>
        <p className='md:text-base text-pretty text-sm text-gray-400'>
-        sad
+       A Diploma III graduate in Industrial Electronics from Politeknik Negeri Jakarta with experience as a Engineering Staff, specializing in RTU programming, electronic component assembly, and product testing. Currently transitioning into a career in Web Development, supported by a Full-Stack Development bootcamp focused on HTML, CSS, and modern frameworks like React.js and Node.js. As a detail-oriented and fast learner, I am passionate about contributing as a full-time web developer and delivering innovative solutions to every project.
 
        </p>
       </motion.div>
@@ -102,7 +102,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 
+          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-gradient-to-br from-blue-500 to-purple-500
           shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
           aria-label="Scroll to top"
         >

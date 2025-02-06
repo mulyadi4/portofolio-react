@@ -4,20 +4,22 @@ const courses = [
   {
     company: "Harisenin.com",
     location: "Jakarta, Indonesia",
-    duration: "Nov 2022 - Feb 2023",
+    duration: "June, 2024 - July, 2024",
     role: "Full Stack Developer Bootcamp",
-    gpa: "3.54/4.00",
+    gpa: "3.40/4.00",
     description:
-      "Designed and developed a website for an insurance company (Insurance Technology) within three months using MERN stack.",
+      "developed a clone of the Periplus website using React.js for the frontend, Express.js for the backend, and PostgreSQL as the database.",
     coursework: [
       "HTML",
       "CSS",
       "JavaScript",
+      "Tailwind CSS",
       "React",
       "Node.js",
       "Express.js",
-      "MongoDB",
+      "PostgreSQL",
     ],
+    link:"https://tinyurl.com/fsd11mulyadi"
   },
 ];
 
@@ -88,9 +90,9 @@ const CourseCard = ({ course }) => (
           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
-      <span className="text-blue-500 hover:underline cursor-pointer">
-        View Certificate
-      </span>
+      <div  className="text-blue-500 hover:underline cursor-pointer">
+        <a href={course.link}>View Certificate</a>
+      </div>
     </div>
   </div>
 );

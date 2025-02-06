@@ -6,7 +6,8 @@ const projectData = [
     image: "/project1.jpg",
     title: "E-commerce Platform",
     description: "A full-stack e-commerce solution with payment integration and admin dashboard.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"]
+    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    link:"https://tinyurl.com/fsd11mulyadi"
   },
   {
     image: "/project2.jpg",
@@ -32,7 +33,8 @@ const projectData = [
     image: "/project3.jpg",
     title: "Task Management Tool",
     description: "Collaborative project management system with drag-and-drop interface.",
-    technologies: ["React", "Redux", "Express", "PostgreSQL"]
+    technologies: ["React", "Redux", "Express", "PostgreSQL",]
+    
   }
 ]
 
@@ -51,13 +53,14 @@ const ScrollReveal = ({ children }) => {
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm transition-all hover:bg-white/10 ">
+    <div  className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm transition-all hover:bg-white/10 ">
+      <a href={project.link}>
       <img 
         src={project.image} 
         alt={project.title} 
         className="h-64 w-full object-cover transition-all group-hover:scale-105"
       />
-      
+      </a>
       <div className="p-6">
         <h3 className="mb-2 text-2xl font-semibold text-white">{project.title}</h3>
         <p className="mb-4 text-gray-300">{project.description}</p>

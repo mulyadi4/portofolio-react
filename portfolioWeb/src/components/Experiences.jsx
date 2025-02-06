@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    role: "Frontend Developer",
-    company: "Tech Corp",
-    location:"Jakarta,Indonesia",
+    role: "Engineering Staff",
+    company: "PT. Pasti Makmurkencana",
+    location:"Bekasi,Indonesia",
     duration: "Jan 2022 - Present",
-    description: "Developing and maintaining web applications using React and Tailwind CSS."
+    description: "Specializing in RTU programming, electronic component assembly, and product testing.",
+    link:"https://tinyurl.com/fsd11mulyadi",
   }
 ];
 

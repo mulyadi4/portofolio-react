@@ -17,8 +17,10 @@ const socialLinks = [
 
 const navItems = [
   { label: "Home", href: "#" },
-  { label: "Tech", href: "#tech" },
+  { label: "Technologi", href: "#tech" },
   { label: "Project", href: "#projects" },
+  { label: "Experience", href: "#projects" },
+  { label: "Course", href: "#contact" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -35,7 +37,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-gray-700 bg-black/70 backdrop-blur-md px-6 py-4 md:px-16">
+    <nav className="fixed top-0 z-50 w-full border-b border-gray-700 bg-black/70 backdrop-blur-lg px-6 py-4 lg:px-16">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <a 
           href="#" 
@@ -45,7 +47,7 @@ function Navbar() {
         </a> 
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-7">
           <ul className="flex gap-8">
             {navItems.map((item) => (
               <li key={item.href}>
@@ -79,7 +81,7 @@ function Navbar() {
         {/* Mobile Menu Button */}
         <button
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="text-white md:hidden p-2"
+          className="text-white lg:hidden p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <BsX size={24} /> : <BsList size={24} />}
@@ -89,7 +91,7 @@ function Navbar() {
         {isMenuOpen && (
           <div className="fixed right-0 top-[84px] flex h-screen 
           w-1/1 flex flex-col items-center justify-start gap-10 border-gray-800  
-          bg-black/90 p-12  md:hidden">
+          bg-black/90 p-12  lg:hidden">
          
             
             <ul className="flex flex-col items-center gap-8 text-2xl mb-12">
