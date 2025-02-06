@@ -1,113 +1,129 @@
 import { useState, useEffect } from "react";
-import { BsGithub, BsLinkedin, BsTwitterX, BsYoutube, BsList, BsX } from "react-icons/bs";
+import { 
+  BsGithub, 
+  BsLinkedin, 
+  BsTwitterX, 
+  BsYoutube, 
+  BsList, 
+  BsX 
+} from "react-icons/bs";
+
+const socialLinks = [
+  { icon: <BsYoutube />, href: "#", color: "hover:text-red-500" },
+  { icon: <BsLinkedin />, href: "#", color: "hover:text-blue-500" },
+  { icon: <BsTwitterX />, href: "#", color: "hover:text-white" },
+  { icon: <BsGithub />, href: "#", color: "hover:text-white" },
+];
+
+const navItems = [
+  { label: "Home", href: "#" },
+  { label: "Tech", href: "#tech" },
+  { label: "Project", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    return () => {
-      document.body.classList.remove('overflow-hidden');
-    };
+    document.body.classList.toggle('overflow-hidden', isMenuOpen);
+    return () => document.body.classList.remove('overflow-hidden');
   }, [isMenuOpen]);
 
+  const handleNavClick = () => {
+    if (window.innerWidth < 768) setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="fixed top-0 z-10 flex w-full items-center 
-    justify-between border-b-gray-700 bg-black/70 px-6
-     py-6 text-white backdrop-blur-md md:justify-evenly md:px-16">
-      <a 
-        href="#home" 
-        className="bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-3xl font-semibold text-transparent opacity-80 transition-all duration-300 hover:opacity-100"
-      >
-        mul
-      </a> 
+    <nav className="fixed top-0 z-50 w-full border-b border-gray-700 bg-black/70 backdrop-blur-md px-6 py-4 md:px-16">
+      <div className="flex items-center justify-between max-w-7xl mx-auto">
+        <a 
+          href="#" 
+          className="bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-3xl font-semibold text-transparent opacity-80 transition-opacity hover:opacity-100"
+        >
+          Mulyadi
+        </a> 
 
-      {/* Mobile Menu Button */}
-      <button
-        className="text-white md:hidden"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        {isMenuOpen ? <BsX size={24} /> : <BsList size={24} />}
-      </button>
-
-      {/* Desktop Navigation */}
-      <ul className="hidden md:flex gap-10">
-        <a href="#home" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-          <li>Home</li>
-        </a>
-        <a href="#tech" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-          <li>Tech</li>
-        </a>
-        <a href="#project" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-          <li>Project</li>
-        </a>
-        <a href="#contact" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-          <li>Contact</li>
-        </a>
-      </ul>
-
-      {/* Desktop Social Icons */}
-      <ul className="hidden md:flex gap-5">
-        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-300">
-          <BsYoutube/>
-        </li>
-        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-300">
-          <BsLinkedin/>
-        </li>
-        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:opacity-300">
-          <BsTwitterX/>
-        </li>
-        <li className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:opacity-300">
-          <BsGithub/>
-        </li>
-      </ul>
-
-      {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col py-50  items-center justify-center bg-black/90 backdrop-blur-lg md:hidden">
-          <button
-            className="absolute top-4 right-4 p-2 text-white"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <BsX size={24} />
-          </button>
-          
-          <ul className="flex flex-col items-center gap-8 text-2xl">
-            <a href="#home" onClick={() => setIsMenuOpen(false)} className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-              <li>Home</li>
-            </a>
-            <a href="#tech" onClick={() => setIsMenuOpen(false)} className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-              <li>Tech</li>
-            </a>
-            <a href="#project" onClick={() => setIsMenuOpen(false)} className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-              <li>Project</li>
-            </a>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)} className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-              <li>Contact</li>
-            </a>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-10">
+          <ul className="flex gap-8">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className="text-white opacity-70 transition-all hover:opacity-100 hover:-translate-y-0.5"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
 
-          <ul className="mt-12 flex gap-8">
-            <li className="cursor-pointer text-2xl opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-300">
-              <BsYoutube/>
-            </li>
-            <li className="cursor-pointer text-2xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-300">
-              <BsLinkedin/>
-            </li>
-            <li className="cursor-pointer text-2xl opacity-70 transition-all duration-300 hover:opacity-300">
-              <BsTwitterX/>
-            </li>
-            <li className="cursor-pointer text-2xl opacity-70 transition-all duration-300 hover:opacity-300">
-              <BsGithub/>
-            </li>
+          <ul className="flex gap-5 ml-6">
+            {socialLinks.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-white opacity-70 transition-all ${link.color} hover:opacity-100`}
+                >
+                  <span className="sr-only">{link.icon.type.name}</span>
+                  <span className="text-xl">{link.icon}</span>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
-      )}
+
+        {/* Mobile Menu Button */}
+        <button
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="text-white md:hidden p-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <BsX size={24} /> : <BsList size={24} />}
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        {isMenuOpen && (
+          <div className="fixed right-0 top-[84px] flex h-screen 
+          w-1/1 flex flex-col items-center justify-start gap-10 border-gray-800  
+          bg-black/90 p-12  md:hidden">
+         
+            
+            <ul className="flex flex-col items-center gap-8 text-2xl mb-12">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    onClick={handleNavClick}
+                    className="text-white opacity-70 transition-all hover:opacity-100"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <ul className="flex gap-8  ">
+              {socialLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={ ` text-white opacity-70 transition-all ${link.color} hover:opacity-100`}
+                  >
+                    <span className="sr-only">{link.icon.type.name}</span>
+                    <span className="text-2xl">{link.icon}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </nav>
   )
 }
