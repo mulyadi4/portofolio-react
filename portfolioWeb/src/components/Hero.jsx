@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import NET from "vanta/src/vanta.net";
-import image1 from "/images1.jpg"; 
+// import image1 from "./assets/image2.jpg"; 
+import image1 from "../assets/image2.jpg";
 import { motion } from "framer-motion"
 
 function Hero() {

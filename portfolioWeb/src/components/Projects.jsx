@@ -4,37 +4,17 @@ import { motion } from "framer-motion"
 const projectData = [
   {
     image: "/project1.jpg",
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with payment integration and admin dashboard.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    link:"https://tinyurl.com/fsd11mulyadi"
-  },
-  {
-    image: "/project2.jpg",
-    title: "Social Media App",
-    description: "Real-time social platform with chat functionality and image sharing.",
-    technologies: ["Next.js", "Firebase", "Tailwind CSS", "WebSockets"]
-  },
-  {
-    image: "/project3.jpg",
-    title: "Task Management Tool",
-    description: "Collaborative project management system with drag-and-drop interface.",
-    technologies: ["React", "Redux", "Express", "PostgreSQL"]
-  }
-  ,
-  {
-    image: "/project3.jpg",
-    title: "Task Management Tool",
-    description: "Collaborative project management system with drag-and-drop interface.",
-    technologies: ["React", "Redux", "Express", "PostgreSQL"]
-  }
-  ,
-  {
-    image: "/project3.jpg",
-    title: "Task Management Tool",
-    description: "Collaborative project management system with drag-and-drop interface.",
-    technologies: ["React", "Redux", "Express", "PostgreSQL",]
-    
+    title: "Clone of Periplus",
+    description: "developed a clone of the Periplus website using React.js for the frontend, Express.js for the backend, and PostgreSQL as the database.",
+    technologies: ["HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "React",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",],
+    link:"https://tinyurl.com/cloneperiplus"
   }
 ]
 

@@ -10,7 +10,7 @@ import {
   BiLogoReact, 
   BiLogoTailwindCss 
 } from "react-icons/bi"
-
+import { SiExpress } from "react-icons/si";
 // Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -48,7 +48,8 @@ function Tech() {
     { icon: BiLogoReact, color: 'text-sky-500', label: 'React' },
     { icon: BiLogoTailwindCss, color: 'text-sky-500', label: 'Tailwind CSS' },
     { icon: BiLogoBootstrap, color: 'text-violet-500', label: 'Bootstrap' },
-    { icon: BiLogoPostgresql, color: 'text-sky-500', label: 'PostgreSQL' }
+    { icon: BiLogoPostgresql, color: 'text-sky-500', label: 'PostgreSQL' },
+    { icon: SiExpress, color: 'text-white', label: 'Express' },
   ]
 
   return (
