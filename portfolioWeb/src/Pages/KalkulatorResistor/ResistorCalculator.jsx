@@ -110,14 +110,17 @@ const ResistorCalculator = () => {
   // Render opsi select untuk warna digit
   const renderOptions = () =>
     colors.map((clr, i) => (
-      <option key={i} value={i}>
+      <option
+        key={i}
+        value={i}
+        style={{ backgroundColor: clr, color: clr === "black" ? "white" : "black" }}
+      >
         {clr}
       </option>
     ));
-
   // Pengaturan posisi pita di body resistor
-  const bandWidth = 8;
-  const bodyWidth = 220; // lebar body resistor dalam pixel
+  const bandWidth = 9;
+  const bodyWidth = 230; // lebar body resistor dalam pixel
   const totalBands = bandColors.length;
   const spacing = (bodyWidth - totalBands * bandWidth) / (totalBands + 1);
 
@@ -205,8 +208,11 @@ const ResistorCalculator = () => {
             onChange={(e) => setMultiplier(e.target.value)}
           >
             {Object.entries(multiplierColors).map(([val, col]) => (
-              <option key={val} value={val}>
+              <option key={val} value={val} 
+              style={{ backgroundColor: col, color: col === "black" ? "white" : "black" }}
+              >
                 {col} (x{val})
+                
               </option>
             ))}
           </select>
@@ -220,7 +226,9 @@ const ResistorCalculator = () => {
               onChange={(e) => setTolerance(e.target.value)}
             >
               {Object.entries(toleranceColors).map(([val, col]) => (
-                <option key={val} value={val}>
+                <option key={val} value={val}
+                style={{ backgroundColor: col, color: col === "black" ? "white" : "black" }}
+                >
                   {col} (±{val}%)
                 </option>
               ))}
@@ -236,7 +244,10 @@ const ResistorCalculator = () => {
               onChange={(e) => setTemperature(e.target.value)}
             >
               {Object.entries(temperatureColors).map(([val, col]) => (
-                <option key={val} value={val}>
+                <option key={val} value={val}
+                style={{ backgroundColor: col, color: col === "black" ? "white" : "black" }}
+              
+                >
                   {col} ({val} ppm/K)
                 </option>
               ))}
