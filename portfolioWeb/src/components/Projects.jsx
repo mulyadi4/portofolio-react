@@ -1,6 +1,5 @@
 
 import { motion } from "framer-motion"
-
 const projectData = [
   {
     image: "/project1.jpg",
@@ -15,7 +14,21 @@ const projectData = [
       "Express.js",
       "PostgreSQL",],
     link:"https://tinyurl.com/cloneperiplus"
+  },  {
+    image: "/project2.jpg",
+    title: "Kalkulator Resistor",
+    description: "developed a resistor calculator using React.js for the frontend.",
+    technologies: ["HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "React",
+      "Node.js",
+     ],
+    link:"https://portofolio-react-eta.vercel.app/kalres"
   }
+
+
 ]
 
 const ScrollReveal = ({ children }) => {
