@@ -25,7 +25,7 @@ const projectData = [
       "React",
       "Node.js",
      ],
-    link:"https://portofolio-react-eta.vercel.app/kalres"
+    link:"https://portofolio-react-eta.vercel.app/#/kalres"
   }
 
 
