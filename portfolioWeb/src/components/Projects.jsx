@@ -26,6 +26,19 @@ const projectData = [
       "Node.js",
      ],
     link:"https://portofolio-react-eta.vercel.app/#/kalres"
+  },
+  {
+    image: "/project3.jpg",
+    title: "Kalkulator Resistor",
+    description: "developed a resistor calculator using React.js for the frontend.",
+    technologies: ["HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "React",
+      "Node.js",
+     ],
+    link:"https://portofolio-react-eta.vercel.app/#/cafe"
   }
 
 
