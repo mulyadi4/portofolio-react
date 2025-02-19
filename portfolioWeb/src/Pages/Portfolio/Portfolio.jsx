@@ -1,11 +1,12 @@
+import Contact from "./Contact"
+import Courses from "./Courses"
+import WorkExperience from "./Experiences"
+import Hero from "./Hero"
+import Navbar from "./Navbar"
+import Projects from "./Projects"
+import Tech from "./Tech"
 
-import Navbar from '../../components/Navbar'
-import Hero from '../../components/Hero'
-import Tech from '../../components/Tech'
-import Projects from '../../components/Projects'
-import WorkExperience from '../../components/Experiences'
-import Courses from '../../components/Courses'
-import Contact from '../../components/Contact'
+
 
 const Portfolio = () => {
   return (
@@ -15,10 +16,10 @@ const Portfolio = () => {
     
    <main className='flex flex-col items-center px-4 md:px-8 lg:px-16 '>
 
-        <Navbar/>
+      <Navbar/> 
         <Hero/>
         <Tech/>
-        <Projects/>
+        <Projects/> 
         <WorkExperience/>
         <Courses/>
         <Contact/>
