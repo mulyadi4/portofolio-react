@@ -1,6 +1,6 @@
-import Contact from "./Contact"
+
 import Courses from "./Courses"
-import WorkExperience from "./Experiences"
+import Experience from "./Experiences"
 import Hero from "./Hero"
 import Navbar from "./Navbar"
 import Projects from "./Projects"
@@ -20,9 +20,9 @@ const Portfolio = () => {
         <Hero/>
         <Tech/>
         <Projects/> 
-        <WorkExperience/>
+        <Experience/>
         <Courses/>
-        <Contact/>
+      
         <button>
 
         </button>

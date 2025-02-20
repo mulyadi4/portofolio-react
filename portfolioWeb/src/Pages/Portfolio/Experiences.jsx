@@ -36,9 +36,9 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
-const WorkExperience = () => {
+const Experience = () => {
   return (
-    <section id="experience" className="min-h-screen py-20 px-8 sm:px-16">
+    <section id="experiences" className="min-h-screen py-20 px-8 sm:px-16">
       <motion.h2 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -59,4 +59,4 @@ const WorkExperience = () => {
   );
 };
 
-export default WorkExperience;
+export default Experience;
