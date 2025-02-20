@@ -14,21 +14,21 @@ const projectData = [
     title: "ResistorCalculator",
     description: "Developed a resistor calculator using React.js for the frontend.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
-    link: "https://portofolio-react-eta.vercel.app/#/kalres"
+    link: "#"
   },
   {
     image: "/project3.jpg",
     title: "CircuitCalculator",
     description: "Developed a circuit calculator using React.js for the frontend.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
-    link: "https://portofolio-react-eta.vercel.app/#/cafe"
+    link: "#"
   },
   {
     image: "/project4.jpg",
     title: "Converter",
     description: "Developed a circuit calculator using React.js for the frontend.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
-    link: "https://portofolio-react-eta.vercel.app/#/cafe"
+    link: "#"
   }
 ];
 
