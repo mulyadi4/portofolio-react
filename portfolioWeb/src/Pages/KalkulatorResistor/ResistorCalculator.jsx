@@ -158,7 +158,7 @@ const ResistorCalculator = () => {
         <div>
           <label className="mr-2">Number of Bands:</label>
           <select
-            className="border p-1"
+            className="border p-1 bg-black"
             value={jumlahBand}
             onChange={(e) => setJumlahBand(e.target.value)}
           >
