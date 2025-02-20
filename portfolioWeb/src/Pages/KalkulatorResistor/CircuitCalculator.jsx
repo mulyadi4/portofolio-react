@@ -19,11 +19,11 @@ const CircuitCalculator = () => {
   return (
     <div className="p-4">
       <div className="mt-8">
-        <label className="block font-semibold">Kalkulator Seri</label>
+        <label className="text-white font-semibold">Kalkulator Seri</label>
         <textarea
           value={seriesInput}
           onChange={(e) => setSeriesInput(e.target.value)}
-          className="border w-full  p-2 mt-2"
+          className="bg-white border w-full  p-2 mt-2"
         />
       
       </div>
@@ -31,12 +31,13 @@ const CircuitCalculator = () => {
           Calculate
         </button>
         <p className="mt-2">{seriesResult}</p>
+
       <div className="mt-8">
-        <label className="block font-semibold">Kalkulator Pararel</label>
+        <label className="text-white block font-semibold">Kalkulator Pararel</label>
         <textarea
           value={parallelInput}
           onChange={(e) => setParallelInput(e.target.value)}
-          className="border w-full  p-2 mt-2"
+          className="bg-white border w-full  p-2 mt-2"
         />
       
       </div>

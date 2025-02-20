@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { LuBadgeCheck } from "react-icons/lu";
 const courses = [
   {
     company: "Harisenin.com",
@@ -75,23 +75,11 @@ const CourseCard = ({ course }) => (
     </div>
 
     {/* Sertifikat */}
-    <div className="flex items-center gap-2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 text-blue-400"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
+    <div className="flex items-center gap-1">
+    <LuBadgeCheck className="text-blue-500" />
       <div  className="text-blue-500 hover:underline cursor-pointer">
-        <a href={course.link}>View Certificate</a>
+        <a href={course.link}>
+          View Certificate</a>
       </div>
     </div>
   </div>

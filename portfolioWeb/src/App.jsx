@@ -1,9 +1,16 @@
 
 import './App.css'
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Portfolio from './Pages/Portfolio/Portfolio'
-import KalRes from './Pages/KalkulatorResistor/KalRes'
-import Cafe from './Pages/Cafe/Cafe'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Tech from './components/Tech'
+import ProjectDashboard from './components/ProjectDashboard'
+import Experience from './components/Experiences'
+import Courses from './components/Courses'
+
+
+
+
+
 
 
 function App() {
@@ -11,16 +18,23 @@ function App() {
 
   return (
     <>
+  <div className="fixed -z-10 min-h-screen w-full
+    [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+    
+   <main className='flex flex-col items-center px-4 md:px-8 lg:px-16 '>
 
-  <Router>
-  <Routes>
-    <Route path="/" element={<Portfolio />} />
-    <Route path="/kalres" element={<KalRes />} />
-    <Route path="/cafe" element={<Cafe/>} />
-   
-  </Routes>
-</Router>
- 
+      <Navbar/> 
+      <Hero/>
+      <Tech/>
+      <ProjectDashboard/> 
+      <Experience/>
+      <Courses/>
+
+      
+        <button>
+
+        </button>
+    </main>
     </>
   )
 }

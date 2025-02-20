@@ -120,13 +120,13 @@ const ResistorCalculator = () => {
     ));
   // Pengaturan posisi pita di body resistor
   const bandWidth = 9;
-  const bodyWidth = 230; // lebar body resistor dalam pixel
+  const bodyWidth = 230; 
   const totalBands = bandColors.length;
   const spacing = (bodyWidth - totalBands * bandWidth) / (totalBands + 1);
 
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Resistor Calculator</h2>
+    <div className=" p-4">
+      <h2 className="text-white text-2xl font-bold mb-4">Resistor Calculator</h2>
 
       {/* Tampilan Gambar Resistor */}
       <div className="flex items-center mb-6">
@@ -154,7 +154,7 @@ const ResistorCalculator = () => {
       </div>
 
       {/* Form Input */}
-      <div className="space-y-3">
+      <div className="text-white space-y-3">
         <div>
           <label className="mr-2">Number of Bands:</label>
           <select
