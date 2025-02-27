@@ -16,13 +16,16 @@ const ProjectDashboard = () => {
 
   return (
     <div>
-      {/* Daftar project */}
+      
       <Projects onSelect={handleProjectSelect} />
 
+
          <SelectProjectCard 
-        selectedProject={selectedProject} 
-        resetSelection={resetSelection} 
-      />
+       selectedProject={selectedProject} 
+       resetSelection={resetSelection} 
+       />
+     
+ 
     </div>
   );
 };

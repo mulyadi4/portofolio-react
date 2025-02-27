@@ -35,7 +35,7 @@ const Converter = () => {
 
   return (
     <div className="p-6 max-w-md mx-auto bg-white rounded-xl shadow-md space-y-4">
-      <h1 className="block text-2xl font-bold text-center">Kalkulator Konversi</h1>
+      <h1 className="block text-2xl font-bold text-center">Conversion Calculator</h1>
       {/* Pilihan tipe konversi */}
     
 
@@ -106,8 +106,8 @@ const Converter = () => {
           }}
           className="border p-2 rounded"
         >
-          <option value="berat">Berat</option>
-          <option value="panjang">Panjang</option>
+          <option value="berat">weight</option>
+          <option value="panjang">length</option>
         </select>
       </div>
     </div>

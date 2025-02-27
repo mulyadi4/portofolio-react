@@ -1,32 +1,40 @@
 import { motion } from "framer-motion";
 import { BsEye } from "react-icons/bs";
+import Techstore from "../assets/img/TechStore.png";
 
 const projectData = [
   {
     image: "/project1.jpg",
     title: "Clone of Periplus",
-    description: "Developed a clone of the Periplus website using React.js for the frontend, Express.js for the backend, and PostgreSQL as the database.",
+    description: "A meticulously crafted clone of the Periplus website, utilizing React.js for a dynamic frontend, Express.js for robust backend services, and PostgreSQL for reliable data management.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js", "Express.js", "PostgreSQL"],
     link: "https://tinyurl.com/cloneperiplus"
   },
   {
-    image: "/project2.jpg",
-    title: "ResistorCalculator",
-    description: "Developed a resistor calculator using React.js for the frontend.",
+    image: Techstore,
+    title: "TechStore",
+    description: "An innovative e-commerce platform offering a seamless shopping experience, developed with modern web technologies including React.js and Node.js.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
-    link: "#"
+    link: "https://ecommerce-lac-nine.vercel.app/"
   },
   {
     image: "/project3.jpg",
-    title: "CircuitCalculator",
-    description: "Developed a circuit calculator using React.js for the frontend.",
+    title: "ResistorCalculator",
+    description: "A user-friendly resistor calculator built with React.js, designed to quickly and accurately compute resistance values.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
     link: "#"
   },
   {
     image: "/project4.jpg",
+    title: "CircuitCalculator",
+    description: "A powerful circuit calculator developed with React.js, streamlining complex electrical computations with an intuitive interface.",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
+    link: "#"
+  },
+  {
+    image: "/project5.jpg",
     title: "Converter",
-    description: "Developed a circuit calculator using React.js for the frontend.",
+    description: "A versatile unit conversion tool crafted with React.js, enabling fast and precise conversions across multiple measurement units.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
     link: "#"
   }
@@ -83,7 +91,7 @@ const ProjectCard = ({ project, onSelect }) => {
 
 const Projects = ({ onSelect }) => {
   return (
-    <section id="projects" className="min-h-screen py-20 px-8 sm:px-16">
+    <section  id="projects" className="min-h-screen py-20 px-8 sm:px-16">
       <motion.h2 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +104,10 @@ const Projects = ({ onSelect }) => {
       <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 lg:grid-cols-3">
         {projectData.map((project, index) => (
           <ScrollReveal key={index}>
+         <a href="#viewProject">
             <ProjectCard project={project} onSelect={onSelect} />
+          </a>   
+         
           </ScrollReveal>
         ))}
       </div>

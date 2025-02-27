@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import NET from "vanta/src/vanta.net";
 // import image1 from "./assets/image2.jpg"; 
-import image1 from "./image2.jpg";
+import image1 from "../assets/img/image2.jpg";
 import { motion } from "framer-motion"
-
+import { FaAngleUp } from "react-icons/fa";
 function Hero() {
   const [showButton, setShowButton] = useState(false);
   const vantaRef = useRef(null);
@@ -103,24 +103,11 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-gradient-to-br from-blue-500 to-purple-500
+          className="fixed bottom-8 right-8 z-50  rounded-full bg-gradient-to-br from-blue-500 to-purple-500
           shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
           aria-label="Scroll to top"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-white"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 15l7-7 7 7"
-            />
-          </svg>
+        <FaAngleUp className="size-9 text-white"/>
         </motion.button>
       )}
       </div>
