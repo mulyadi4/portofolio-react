@@ -1,11 +1,11 @@
 
 import './App.css'
-import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Tech from './components/Tech'
-import ProjectDashboard from './components/ProjectDashboard'
 import Experience from './components/Experiences'
 import Courses from './components/Courses'
+import Projects from './components/Projects'
+import Header from './components/Header'
 
 
 
@@ -19,14 +19,14 @@ function App() {
   return (
     <>
   <div className="fixed -z-10 min-h-screen w-full
-    [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+    [background:radial-gradient(110%_110%_at_50%_10%,#000_30%,#62e_100%)]"></div>
     
    <main className='flex flex-col items-center px-4 md:px-8 lg:px-16 '>
 
-      <Navbar/> 
+      <Header/> 
       <Hero/>
       <Tech/>
-      <ProjectDashboard/> 
+      <Projects/> 
       <Experience/>
       <Courses/>
 

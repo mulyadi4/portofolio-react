@@ -61,8 +61,9 @@ function Tech() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="text-4xl font-light text-white md:text-6xl"
-      >
+        className= "text-4xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-4">
+
+      
         Tech Stack
       </motion.h1>
 

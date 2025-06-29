@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { LuBadgeCheck } from "react-icons/lu";
+import { Calendar, MapPin, Briefcase } from "lucide-react"
 const courses = [
   {
     company: "Harisenin.com",
@@ -41,10 +42,19 @@ const CourseCard = ({ course }) => (
     <div className="flex justify-between items-start mb-4">
       <div>
         <h3 className="text-xl font-semibold text-gray-300">{course.company}</h3>
-        <p className="text-gray-500">{course.location}</p>
+       <div className="flex items-center gap-1 text-gray-500">
+        <MapPin size={16} />
+         <p >{course.location}</p>
+       </div>
+       
       </div>
-      <span className="text-gray-300 text-sm">{course.duration}</span>
+      <div className="flex items-center gap-1 text-gray-300 text-sm">
+                      <Calendar size={16} />
+                      <span>{course.duration}</span>
+                    </div>
+    
     </div>
+  
 
     {/* Detail Program */}
     <div className="mb-4">
@@ -66,7 +76,7 @@ const CourseCard = ({ course }) => (
         {course.coursework.map((tech, index) => (
           <span
             key={index}
-            className="px-3 py-1 text-sm bg-white/8  rounded-lg text-gray-300 rounded-full"
+            className="px-3 py-1 text-sm bg-white/8   text-gray-300 rounded-full"
           >
             {tech}
           </span>

@@ -1,62 +1,79 @@
-import { motion } from "framer-motion";
-
-const experiences = [
-  {
-    role: "Engineering Staff",
-    company: "PT. Pasti Makmurkencana",
-    location:"Bekasi,Indonesia",
-    duration: "Jan 2022 - Present",
-    description: "Specializing in RTU programming, electronic component assembly, and product testing.",
-    link:"https://tinyurl.com/fsd11mulyadi",
-  }
-];
-
-const ScrollReveal = ({ children }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6 }}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
-const ExperienceCard = ({ experience }) => {
-  return (
-    <div className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm p-4 transition-all hover:bg-white/10">
-      <h3 className="text-2xl font-semibold text-white">{experience.role} </h3>
-      <p className="text-gray-400 text-xs mb-2">  {experience.location} <span className="text-gray-400 fixed right-3  text-xs mb-2">{experience.duration}</span></p>
-      <p className="text-gray-300">{experience.company}</p>
-     
-      <p className="text-gray-300">{experience.description}</p>
-    </div>
-  );
-};
+import { Calendar, MapPin, Briefcase } from "lucide-react"
 
 const Experience = () => {
-  return (
-    <section id="experiences" className="min-h-screen py-20 px-8 sm:px-16">
-      <motion.h2 
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-20 text-center text-4xl font-bold text-white md:text-5xl"
-      >
-        Work Experience
-      </motion.h2>
+  const experiences = [
+     {
+      id: 1,
+      title: "Engineering Staff",
+      company: "PT. Pasti Makmurkencana",
+      location: "Bekasi, Indonesia",
+      period: "2021 - Present",
+      type: "Full-time",
+      description:
+        "Specialized in RTU programming, electronic component assembly, and product testing in industrial automation systems.",
+     
+    },
+  
 
-      <div className="mx-auto grid max-w-4xl gap-12 md:grid-cols-1 lg:grid-cols-2">
-        {experiences.map((experience, index) => (
-          <ScrollReveal key={index}>
-            <ExperienceCard experience={experience} />
-          </ScrollReveal>
-        ))}
+  ]
+
+  return (
+    <section id="experience" className="py-20 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-4">
+            Experience
+          </h2>
+          <p className="text-xl text-gray-300">My professional journey</p>
+        </div>
+
+        <div className="relative max-w-4xl mx-auto">
+          {/* Timeline line */}
+          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-600 to-pink-600"></div>
+
+          {experiences.map((exp, index) => (
+            <div
+              key={exp.id}
+              className={`relative flex items-center mb-12 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+            >
+              {/* Timeline marker */}
+              <div className="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-indigo-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+
+              {/* Content */}
+              <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"} ml-16 md:ml-0`}>
+                <div className="bg-white/5 p-6 rounded-xl shadow-lg border  hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full">
+                      <Briefcase size={16} className="text-gray-300" />
+                      <span className="text-sm font-medium text-gray-600">{exp.type}</span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-1">{exp.title}</h3>
+                  <h4 className="text-lg font-semibold text-indigo-600 mb-3">{exp.company}</h4>
+
+                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-400">
+                    <div className="flex items-center gap-1">
+                      <Calendar size={16} />
+                      <span>{exp.period}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <MapPin size={16} />
+                      <span>{exp.location}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
+
+            
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience
