@@ -10,7 +10,9 @@ import {
   BiLogoReact, 
   BiLogoTailwindCss 
   
+  
 } from "react-icons/bi"
+import { SiMysql } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 
 const containerVariants = {
@@ -42,8 +44,8 @@ const hoverEffect = {
 
 function Tech() {
   const techStack = [
-     { icon: BiLogoHtml5, color: 'text-orange-500', label: 'JavaScript' },
-    { icon: BiLogoCss3, color: 'text-red-500', label: 'JavaScript' },
+     { icon: BiLogoHtml5, color: 'text-orange-500', label: 'HTML' },
+    { icon: BiLogoCss3, color: 'text-red-500', label: 'Css' },
     { icon: BiLogoJavascript, color: 'text-yellow-500', label: 'JavaScript' },
     { icon: BiLogoNodejs, color: 'text-green-600', label: 'Node.js' },
     { icon: BiLogoReact, color: 'text-sky-500', label: 'React' },
@@ -51,6 +53,7 @@ function Tech() {
     { icon: BiLogoBootstrap, color: 'text-violet-500', label: 'Bootstrap' },
     { icon: BiLogoPostgresql, color: 'text-sky-500', label: 'PostgreSQL' },
     { icon: SiExpress, color: 'text-white', label: 'Express' },
+    { icon: SiMysql, color: 'text-yellow-500', label: 'MySQL' }
   ]
 
   return (

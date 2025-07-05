@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useState, useEffect } from "react"
 import { Menu, X, Github, Linkedin } from "lucide-react"
