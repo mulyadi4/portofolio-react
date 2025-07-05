@@ -4,7 +4,7 @@ const Experience = () => {
   const experiences = [
      {
       id: 1,
-      title: "Engineering Staff",
+      title: "Instrumentation Staff",
       company: "PT. Pasti Makmurkencana",
       location: "Bekasi, Indonesia",
       period: "2021 - Present",

@@ -5,7 +5,7 @@ const courses = [
   {
     company: "Harisenin.com",
     location: "Jakarta, Indonesia",
-    duration: "June, 2024 - July, 2024",
+    duration: "Feb, 2024 - July, 2024",
     role: "Full Stack Developer Bootcamp",
     gpa: "3.40/4.00",
     description:

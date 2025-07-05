@@ -61,7 +61,7 @@ const Hero = () => {
             </h2>
 
             <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
-              A Diploma III graduate in Industrial Electronics from Politeknik Negeri Jakarta with experience as an Instrumentation Staff, specializing in RTU programming, electronic component assembly, and product testing. I'm now actively transitioning into FrontEnd Developer, having completed an intensive Full-Stack Development bootcamp where I mastered HTML, CSS, and modern JavaScript frameworks including React.js and Node.js. As a detail-oriented professional and rapid learner, I'm passionate about creating exceptional user experiences as a Frontend Engineer and delivering innovative, performant solutions for every project I undertake.
+              A Diploma III graduate in Industrial Electronics from Politeknik Negeri Jakarta with experience as an Instrumentation Staff, specializing in RTU programming, electronic component assembly, and product testing. I'm now actively transitioning into FrontEnd Developer, having completed an intensive Full-Stack Development bootcamp where I mastered HTML, CSS, and modern JavaScript frameworks including React.js and Node.js. As a detail-oriented professional and rapid learner, I'm passionate about creating exceptional user experiences as a Frontend Developer and delivering innovative, performant solutions for every project I undertake.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -71,7 +71,7 @@ const Hero = () => {
               >
                 View My Work <ArrowRight size={20} />
               </button>
-              <button onClick={() => window.open("https://drive.google.com/drive/u/2/my-drive", "_blank")}
+              <button onClick={() => window.open("hhttps://docs.google.com/document/d/e/2PACX-1vTowdzH1qq-EngxEDSg1th-w0o1zAgDPR07QMJjwz7QuEXfd-Ajy4tdEE0UxzCRng/pub", "_blank")}
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 backdrop-blur-sm hover:bg-white/20 transform hover:-translate-y-1 transition-all duration-300"
                 > 
                 <Download size={20} />
