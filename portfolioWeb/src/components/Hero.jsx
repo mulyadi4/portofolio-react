@@ -7,7 +7,7 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed] = useState(150);
 
-  const words = ["Frontend Engineer"];
+  const words = ["FrontEnd Developer"];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -61,7 +61,7 @@ const Hero = () => {
             </h2>
 
             <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-2xl">
-              A Diploma III graduate in Industrial Electronics from Politeknik Negeri Jakarta with experience as an Engineering Staff, specializing in RTU programming, electronic component assembly, and product testing. I'm now actively transitioning into web development, having completed an intensive Full-Stack Development bootcamp where I mastered HTML, CSS, and modern JavaScript frameworks including React.js and Node.js. As a detail-oriented professional and rapid learner, I'm passionate about creating exceptional user experiences as a Frontend Engineer and delivering innovative, performant solutions for every project I undertake.
+              A Diploma III graduate in Industrial Electronics from Politeknik Negeri Jakarta with experience as an Instrumentation Staff, specializing in RTU programming, electronic component assembly, and product testing. I'm now actively transitioning into FrontEnd Developer, having completed an intensive Full-Stack Development bootcamp where I mastered HTML, CSS, and modern JavaScript frameworks including React.js and Node.js. As a detail-oriented professional and rapid learner, I'm passionate about creating exceptional user experiences as a Frontend Engineer and delivering innovative, performant solutions for every project I undertake.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
