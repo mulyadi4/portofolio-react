@@ -11,48 +11,48 @@ const Projects = () => {
       title: "Clone of Periplus",
       description:
         "A meticulously crafted clone of the Periplus website, utilizing React.js for a dynamic frontend, Express.js for robust backend services, and PostgreSQL for reliable data management.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js", "Express.js", "PostgreSQL"],
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind", "React", "Node.js", "Express.js", "PostgreSQL"],
       category: "fullstack",
-      github: "https://tinyurl.com/cloneperiplus",
-      live: "https://example.com",
+      github: "https://github.com/Kelompok-1-FSD11/Fullstack-Periplus-Kelompok-1",
+      
     },
     {
       id: 2,
         title: "TechStore",
-      description: "An innovative e-commerce platform offering a seamless shopping experience, developed with modern web technologies including React.js and Node.js.",
-     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
+      description: "An innovative e-commerce platform offering a seamless shopping experience, developed with modern web technologies including React.js .",
+     technologies: ["HTML", "CSS", "JavaScript", "Tailwind", "React"],
       category: "frontend",
-      github: "https://ecommerce-lac-nine.vercel.app/",
-      live: "https://example.com",
+      github: "https://github.com/mulyadi4/Ecommerce",
+      live: "https://ecommerce-lac-nine.vercel.app/",
     },
-    {
+      {
       id: 3,
-     title: "ResistorCalculator",
-    description: "A user-friendly resistor calculator built with React.js, designed to quickly and accurately compute resistance values.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
+    title: "CaffeShop",
+    description: "An immersive, Vite‑powered React.js coffee shop experience featuring a beautifully responsive menu gallery, real‑time category filtering, and a seamless cart workflow—complete with smooth animations and mobile‑first design for effortless browsing and ordering.",
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "React"],
       category: "frontend",
-      github: "https://github.com",
-      live: "https://example.com",
+      github: "https://github.com/mulyadi4/coffeshop",
+      live: "https://coffeshop-two.vercel.app/",
     },
     {
       id: 4,
-        title: "CircuitCalculator",
-    description: "A powerful circuit calculator developed with React.js, streamlining complex electrical computations with an intuitive interface.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
-    link: "#",
+     title: "ResistorCalculator",
+    description: "A user-friendly resistor calculator built with React.js, designed to quickly and accurately compute resistance values.",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind", "React"],
       category: "frontend",
-      github: "https://github.com",
-      live: "https://example.com",
+      github: "https://github.com/mulyadi4/react-resistor/tree/main/kresistor",
+      live: "https://kalkulator-resistor.vercel.app/",
     },
     {
       id: 5,
-    title: "Converter",
+        title: "ConvertLIVE",
     description: "A versatile unit conversion tool crafted with React.js, enabling fast and precise conversions across multiple measurement units.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Node.js"],
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind", "React"],
       category: "frontend",
-      github: "https://github.com",
-      live: "https://example.com",
+      github: "https://github.com/mulyadi4/react-convert/tree/main/convert",
+      live: "https://react-convert.vercel.app",
     }
+  
     
 
   ]
@@ -101,11 +101,11 @@ const Projects = () => {
            
               <div className="p-8">
                 <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-gray-200 mb-4 leading-relaxed">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, index) => (
-                    <span key={index} className="px-3 py-1 text-sm bg-white/8   text-gray-400 rounded-full">
+                    <span key={index} className="px-3 py-1 text-sm bg-white/8   text-gray-300 rounded-full">
                       {tech}
                     </span>
                   ))}

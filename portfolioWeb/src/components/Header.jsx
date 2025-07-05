@@ -1,6 +1,7 @@
+"use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react"
+import { Menu, X, Github, Linkedin } from "lucide-react"
 
 const Header = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -29,6 +30,7 @@ const Header = ({ activeSection }) => {
     }
     setIsMenuOpen(false)
   }
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -40,8 +42,8 @@ const Header = ({ activeSection }) => {
   }, [])
 
   return (
-   <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/98 backdrop-blur-md shadow-lg border-b border-gray-200"
           : "bg-white/95 backdrop-blur-md border-b border-gray-100"
@@ -49,13 +51,15 @@ const Header = ({ activeSection }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <div className="flex-shrink-0">
             <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
               Mulyadi
             </span>
           </div>
 
-          <nav className={`hidden md:flex space-x-8 ${isMenuOpen ? "block" : ""}`}>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -74,10 +78,11 @@ const Header = ({ activeSection }) => {
             ))}
           </nav>
 
+          {/* Desktop Social Links */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex space-x-2">
               <a
-                href="https://github.com"
+                href="https://github.com/mulyadi4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-all duration-200"
@@ -85,22 +90,17 @@ const Header = ({ activeSection }) => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/mulyadi1999"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-all duration-200"
               >
                 <Linkedin size={20} />
               </a>
-              <a
-                href="mailto:contact@example.com"
-                className="w-10 h-10 flex items-center justify-center rounded-full text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-all duration-200"
-              >
-                <Mail size={20} />
-              </a>
             </div>
           </div>
 
+          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -115,6 +115,7 @@ const Header = ({ activeSection }) => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+              {/* Mobile Navigation Links */}
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -128,6 +129,28 @@ const Header = ({ activeSection }) => {
                   {item.label}
                 </button>
               ))}
+
+              {/* Mobile Social Links */}
+              <div className="pt-4 pb-2 border-t border-gray-200 mt-4">
+                <div className="flex justify-center space-x-4">
+                  <a
+                    href="https://github.com/mulyadi4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center rounded-full text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-all duration-200"
+                  >
+                    <Github size={20} />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/mulyadi1999"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center rounded-full text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-all duration-200"
+                  >
+                    <Linkedin size={20} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         )}

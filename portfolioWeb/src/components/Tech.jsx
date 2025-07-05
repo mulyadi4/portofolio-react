@@ -9,9 +9,10 @@ import {
   BiLogoPostgresql, 
   BiLogoReact, 
   BiLogoTailwindCss 
+  
 } from "react-icons/bi"
 import { SiExpress } from "react-icons/si";
-// Animation variants
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -53,10 +54,11 @@ function Tech() {
   ]
 
   return (
-    <section 
-      id="tech" 
-      className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-16 md:gap-32 py-12"
+    
+    <section className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-16 md:gap-32 py-20"
+    id="tech" 
     >
+ 
       <motion.h1 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -78,15 +80,15 @@ function Tech() {
           const Icon = tech.icon
           return (
             <motion.div 
-              key={index}
+            key={index}
               variants={itemVariants}
               whileHover={hoverEffect}
               className="flex flex-col items-center gap-2 "
-            >
+              >
               <Icon 
                 aria-label={tech.label}
                 className={`cursor-pointer text-[80px] sm:text-[100px] md:text-[120px] ${tech.color} `}
-              />
+                />
               <span className="text-white text-sm font-medium opacity-0 transition-opacity group-hover:opacity-100">
                 {tech.label}
               </span>
@@ -94,6 +96,7 @@ function Tech() {
           )
         })}
       </motion.div>
+          
     </section>
   )
 }

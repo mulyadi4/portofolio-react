@@ -19,6 +19,7 @@ const courses = [
       "Node.js",
       "Express.js",
       "PostgreSQL",
+      "MySQL"
     ],
     link:"https://tinyurl.com/fsd11mulyadi"
   },
