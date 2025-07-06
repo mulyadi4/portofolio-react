@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronDown, Download, ArrowRight } from "lucide-react";
-
+import profile from "./img/profile.jpeg";
 const Hero = () => {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -84,8 +84,8 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white/20 relative z-10">
                 <img
-                  src="/src/assets/img/profile.jpeg"
-                  alt="Mulyadi"
+                  src={profile}
+                  
                   className="w-full h-full object-cover"
                 />
               </div>
