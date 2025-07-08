@@ -71,7 +71,7 @@ const Hero = () => {
               >
                 View My Work <ArrowRight size={20} />
               </button>
-              <button onClick={() => window.open("https://drive.google.com/file/d/1RCOXkAck6GLQd-WT2LEKDAcuD3NDYrpx/view", "_blank")}
+              <button onClick={() => window.open("https://drive.google.com/file/d/1DTF2UjDd-sqZmVBGs2UqWcXxGD0cdsI8/view", "_blank")}
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 backdrop-blur-sm hover:bg-white/20 transform hover:-translate-y-1 transition-all duration-300"
                 > 
                 <Download size={20} />
