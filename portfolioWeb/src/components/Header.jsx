@@ -1,45 +1,46 @@
-
-
-import { useState, useEffect } from "react"
-import { Menu, X, Github, Linkedin } from "lucide-react"
+// src/Header.jsx
+import { useState, useEffect } from "react";
+import { Menu, X, Github, Linkedin } from "lucide-react";
+import { useLanguage } from "./LanguageProvider";
 
 const Header = ({ activeSection }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { language, toggle, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "tech", label: "Tech" },
-    { id: "projects", label: "Projects" },
-    { id: "experience", label: "Experience" },
-    { id: "courses", label: "Course" },
-  ]
+    { id: "home", labelKey: "nav_home" },
+    { id: "tech", labelKey: "nav_tech" },
+    { id: "projects", labelKey: "nav_projects" },
+    { id: "experience", labelKey: "nav_experience" },
+    { id: "courses", labelKey: "nav_courses" },
+  ];
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setIsMenuOpen(false)
+        setIsMenuOpen(false);
       }
-    }
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header
@@ -68,7 +69,7 @@ const Header = ({ activeSection }) => {
                   activeSection === item.id ? "text-indigo-600" : "text-gray-600 hover:text-indigo-600"
                 }`}
               >
-                {item.label}
+                {t(item.labelKey)}
                 <span
                   className={`absolute left-0 bottom-0 h-0.5 w-full bg-gradient-to-r from-indigo-600 to-pink-600 rounded-full transition-opacity duration-300 ${
                     activeSection === item.id ? "opacity-100" : "opacity-0 group-hover:opacity-50"
@@ -78,36 +79,58 @@ const Header = ({ activeSection }) => {
             ))}
           </nav>
 
-          {/* Desktop Social Links */}
+          {/* Desktop Social Links + Language Toggle */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex space-x-2">
-              <a
-                href="https://github.com/mulyadi4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-all duration-200"
+            <div className="flex items-center gap-3">
+              <div className="flex space-x-2">
+                <a
+                  href="https://github.com/mulyadi4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center rounded-full text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-all duration-200"
+                >
+                  <Github size={20} />
+                </a>
+                <a
+                  href="https://linkedin.com/in/mulyadi1999"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center rounded-full text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-all duration-200"
+                >
+                  <Linkedin size={20} />
+                </a>
+              </div>
+
+              {/* Language Toggle */}
+              <button
+                onClick={toggle}
+                className="px-3 py-2 rounded-md border border-gray-200 text-sm font-medium hover:bg-gray-50 transition"
+                aria-label="Toggle language"
+                title={language === "en" ? "Switch to Indonesian" : "Switch to English"}
               >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://linkedin.com/in/mulyadi1999"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-all duration-200"
-              >
-                <Linkedin size={20} />
-              </a>
+                {language === "en" ? "EN" : "ID"}
+              </button>
             </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-colors duration-200"
+              onClick={toggle}
+              className="px-2 py-1 rounded-md text-sm font-medium border border-gray-200"
+              title={language === "en" ? "Switch to Indonesian" : "Switch to English"}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {language === "en" ? "EN" : "ID"}
             </button>
+
+            <div>
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 rounded-md text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-colors duration-200"
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -126,7 +149,7 @@ const Header = ({ activeSection }) => {
                       : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
                   }`}
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                 </button>
               ))}
 
@@ -156,7 +179,7 @@ const Header = ({ activeSection }) => {
         )}
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

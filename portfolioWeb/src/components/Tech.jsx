@@ -14,6 +14,7 @@ import {
 } from "react-icons/bi"
 import { SiMysql } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
+import { useLanguage } from "./LanguageProvider";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -55,7 +56,7 @@ function Tech() {
     { icon: SiExpress, color: 'text-white', label: 'Express' },
     { icon: SiMysql, color: 'text-yellow-500', label: 'MySQL' }
   ]
-
+ const { t } = useLanguage();
   return (
     
     <section className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-16 md:gap-32 py-20"
@@ -68,8 +69,8 @@ function Tech() {
         viewport={{ once: true, margin: "-100px" }}
         className= "text-4xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-4">
 
-      
-        Tech Stack
+      {t("tech_stack")}
+       
       </motion.h1>
 
       <motion.div 
