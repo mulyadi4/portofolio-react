@@ -52,8 +52,8 @@ const Projects = () => {
       id: 3,
       title: { en: "CaffeShop", id: "CaffeShop" },
       description: {
-        en: "An immersive, Vite-powered React.js coffee shop experience featuring a beautifully responsive menu gallery, real-time category filtering, and a seamless cart workflow.",
-        id: "Sebuah website coffee shop dengan React.js dan Vite yang menghadirkan galeri menu responsif, filter kategori real-time, dan alur keranjang belanja yang mulus.",
+        en: "An immersive, Vite-powered React.js coffee shop experience featuring a beautifully responsive menu gallery, Added smooth scrolling and responsive breakpoints for desktop and mobile",
+        id: "Sebuah website coffee shop dengan React.js dan Vite yang menghadirkan galeri menu responsif, Menambahkan smooth scrolling dan breakpoint responsif untuk desktop dan seluler.",
       },
       technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "React"],
       category: "frontend",

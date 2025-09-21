@@ -83,7 +83,7 @@ const Hero = () => {
               <button
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1DTF2UjDd-sqZmVBGs2UqWcXxGD0cdsI8/view",
+                    "https://tinyurl.com/cvmulyadi",
                     "_blank"
                   )
                 }
