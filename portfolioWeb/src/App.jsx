@@ -18,10 +18,10 @@ function App() {
 
   return (
     <>
-  <div className="fixed -z-10 min-h-screen w-full
+  {/* <div className="fixed -z-10 min-h-screen w-full
     [background:radial-gradient(110%_110%_at_50%_10%,#000_30%,#62e_100%)]"></div>
-    
-   <main className='flex flex-col items-center px-4 md:px-8 lg:px-16 '>
+     */}
+   <main className='flex flex-col items-center px-4 md:px-8 lg:px-16 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 '>
 
       <Header/> 
       <Hero/>
