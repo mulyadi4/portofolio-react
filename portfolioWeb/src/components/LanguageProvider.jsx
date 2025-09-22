@@ -9,7 +9,7 @@ const translations = {
   nav_projects: { en: "Projects", id: "Proyek" },
   nav_experience: { en: "Experience", id: "Pengalaman" },
   nav_courses: { en: "Course", id: "Kursus" },
-
+  i_am: { en: "I'm a", id: "Saya seorang" },
   hi_im: { en: "Hi, I'm", id: "Hai, saya" },
   view_my_work: { en: "View My Work", id: "Lihat Karya" },
   download_cv: { en: "Download CV", id: "Unduh CV" },
@@ -56,7 +56,7 @@ export default function LanguageProvider({ children }) {
     return entry[language] ?? entry.en;
   };
 
-  const toggle = () => setLanguage((l) => (l === "en" ? "id" : "en"));
+  const toggle = () => setLanguage((l) => (l === "id" ? "en" : "id"));
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, toggle, t }}>

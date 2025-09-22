@@ -60,7 +60,7 @@ const Hero = () => {
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white/90 mb-6 min-h-[3.5rem]">
               {t("front_end_dev") && (
                 <>
-                  I'm a{" "}
+                  {t("i_am")}{" "}
                   <span className="text-cyan-400">
                     {text}
                     <span className="animate-pulse">|</span>

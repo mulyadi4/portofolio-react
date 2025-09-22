@@ -108,7 +108,7 @@ const Header = ({ activeSection }) => {
                 aria-label="Toggle language"
                 title={language === "en" ? "Switch to Indonesian" : "Switch to English"}
               >
-                {language === "en" ? "EN" : "ID"}
+                {language === "id" ? "ID" : "EN"}
               </button>
             </div>
           </div>
