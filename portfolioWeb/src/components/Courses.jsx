@@ -130,8 +130,8 @@ function Courses() {
         id: "Proyek Akhir:",
       },
       coursework_title: {
-        en: "Relevant Coursework:",
-        id: "Kursus Relevan:",
+        en: "Course materials:",
+        id: "Materi kursus::",
       },
       view_certificate: {
         en: "View Certificate",

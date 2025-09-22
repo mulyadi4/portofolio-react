@@ -155,7 +155,7 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-500 hover:text-blue-800 font-medium transition-colors duration-200"
+                      className="flex items-center gap-2 text-blue-500 hover:text-blue-300 font-medium transition-colors duration-200"
                     >
                       <ExternalLink size={16} />
                       {text.live_demo[language]}
@@ -165,7 +165,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-500 hover:text-blue-800 font-medium transition-colors duration-200"
+                    className="flex items-center gap-2 text-blue-500 hover:text-blue-300 font-medium transition-colors duration-200"
                   >
                     <Github size={16} />
                     {text.source_code[language]}
