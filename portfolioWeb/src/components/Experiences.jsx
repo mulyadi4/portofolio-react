@@ -15,7 +15,7 @@ const Experience = () => {
         title: { en: "Instrumentation Staff", id: "Staf Instrumentasi" },
         company: { en: "PT. Pasti Makmurkencana", id: "PT. Pasti Makmurkencana" },
         location: { en: "Bekasi, Indonesia", id: "Bekasi, Indonesia" },
-        period: { en: "2021 - Present", id: "2021 - Sekarang" },
+        period: { en: "2022 - Present", id: "2022 - Sekarang" },
         type: { en: "Full-time", id: "Penuh Waktu" },
         description: {
           en: "Specialized in RTU programming, electronic component assembly, and product testing in industrial automation systems.",
