@@ -5,7 +5,7 @@ import { useLanguage } from "./LanguageProvider";
 const Experience = () => {
   const { language, t } = useLanguage();
 
-  // translations khusus untuk pengalaman
+ 
   const expTranslations = {
     title: { en: "Experience", id: "Pengalaman" },
     subtitle: { en: "My professional journey", id: "Perjalanan karier saya" },

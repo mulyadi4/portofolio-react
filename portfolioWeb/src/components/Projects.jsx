@@ -6,7 +6,7 @@ const Projects = () => {
   const [filter, setFilter] = useState("all");
   const { language } = useLanguage();
 
-  // translations untuk judul, subtitle, kategori, tombol, dll
+  
   const text = {
     title: { en: "Featured Projects", id: "Proyek Unggulan" },
     subtitle: { en: "Some of my recent work", id: "Beberapa karya terbaru saya" },
@@ -20,7 +20,7 @@ const Projects = () => {
     source_code: { en: "Source Code", id: "Kode Sumber" },
   };
 
-  // list project (title & desc juga bisa diterjemahkan di sini)
+
   const projects = [
     {
       id: 1,
