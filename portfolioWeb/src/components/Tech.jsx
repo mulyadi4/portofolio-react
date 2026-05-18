@@ -1,19 +1,27 @@
 
 import { motion } from 'framer-motion'
 import { 
-  BiLogoBootstrap, 
-  BiLogoCss3, 
-  BiLogoHtml5, 
-  BiLogoJavascript, 
-  BiLogoNodejs, 
-  BiLogoPostgresql, 
-  BiLogoReact, 
-  BiLogoTailwindCss 
+  BiLogoBootstrap,
+  BiLogoCss3,
+  BiLogoHtml5,
+  BiLogoJavascript,
+  BiLogoNodejs,
+  BiLogoPostgresql,
+  BiLogoReact,
+  BiLogoTailwindCss,
+  BiLogoVuejs,
+  BiLogoGithub,
+  BiLogoGit,
+  BiLogoDocker
   
   
 } from "react-icons/bi"
-import { SiMysql } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
+
+import {
+  SiMysql,
+  SiExpress,
+  SiJest,
+} from "react-icons/si"
 import { useLanguage } from "./LanguageProvider";
 
 const containerVariants = {
@@ -45,16 +53,21 @@ const hoverEffect = {
 
 function Tech() {
   const techStack = [
-     { icon: BiLogoHtml5, color: 'text-orange-500', label: 'HTML' },
-    { icon: BiLogoCss3, color: 'text-red-500', label: 'Css' },
-    { icon: BiLogoJavascript, color: 'text-yellow-500', label: 'JavaScript' },
-    { icon: BiLogoNodejs, color: 'text-green-600', label: 'Node.js' },
-    { icon: BiLogoReact, color: 'text-sky-500', label: 'React' },
-    { icon: BiLogoTailwindCss, color: 'text-sky-500', label: 'Tailwind CSS' },
+  { icon: BiLogoHtml5, color: 'text-orange-500', label: 'HTML' },
+    { icon: BiLogoCss3, color: 'text-blue-500', label: 'CSS' },
+    { icon: BiLogoJavascript, color: 'text-yellow-400', label: 'JavaScript' },
+    { icon: BiLogoReact, color: 'text-cyan-400', label: 'React.js' },
+    { icon: BiLogoVuejs, color: 'text-green-500', label: 'Vue.js' },
     { icon: BiLogoBootstrap, color: 'text-violet-500', label: 'Bootstrap' },
+    { icon: BiLogoTailwindCss, color: 'text-sky-400', label: 'Tailwind CSS' },
+     { icon: BiLogoNodejs, color: 'text-green-600', label: 'Node.js' },
+    { icon: SiExpress, color: 'text-gray-200', label: 'Express.js' },
+     { icon: SiMysql, color: 'text-blue-400', label: 'MySQL' },
     { icon: BiLogoPostgresql, color: 'text-sky-500', label: 'PostgreSQL' },
-    { icon: SiExpress, color: 'text-white', label: 'Express' },
-    { icon: SiMysql, color: 'text-yellow-500', label: 'MySQL' }
+    { icon: BiLogoGit, color: 'text-orange-600', label: 'Git' },
+    { icon: BiLogoGithub, color: 'text-white', label: 'GitHub' },
+    { icon: BiLogoDocker, color: 'text-blue-500', label: 'Docker (Basic)' },
+    { icon: SiJest, color: 'text-red-500', label: 'Jest (Basic)' },
   ]
  const { t } = useLanguage();
   return (

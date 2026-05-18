@@ -84,6 +84,35 @@ const Projects = () => {
       github: "https://github.com/mulyadi4/react-convert/tree/main/convert",
       live: "https://react-convert.vercel.app",
     },
+    {
+  id: 6,
+  title: {
+    en: "Bookshelf Application",
+    id: "Aplikasi Bookshelf",
+  },
+  description: {
+    en: "A book management application developed from a Dicoding learning project. Refactored from vanilla HTML/JavaScript into React.js to improve maintainability and application structure. Integrated frontend and backend using Node.js (Express) with RESTful API support for CRUD operations.",
+    
+    id: "Aplikasi manajemen buku yang dikembangkan dari proyek pembelajaran Dicoding. Melakukan refactor dari HTML/JavaScript murni ke React.js untuk meningkatkan maintainability dan struktur aplikasi. Mengintegrasikan frontend dan backend menggunakan Node.js (Express) dengan dukungan RESTful API untuk operasi CRUD.",
+  },
+
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React.js",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "RESTful API",
+  ],
+
+  category: "fullstack",
+
+  github: "https://github.com/mulyadi4/bookshelf",
+
+},
+    
   ];
 
   const categories = [
