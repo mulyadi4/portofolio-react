@@ -112,6 +112,20 @@ const Projects = () => {
   github: "https://github.com/mulyadi4/bookshelf",
 
 },
+  {
+    id: 7,
+    title: {
+      en: "Core Initiative Studio x Rakamin Academy",
+      id: "Core Initiative Studio x Rakamin Academy",
+    },
+    description: {
+      en: "Frontend Developer project built with JavaScript and Vue.js. Developed a responsive multi-page website based on Figma design, learned CI/CD implementation using Docker, applied basic unit testing with Jest, and deployed the application.",
+      id: "Proyek Frontend Developer menggunakan JavaScript dan Vue.js. Membangun website multi-halaman yang responsif berdasarkan desain Figma, mempelajari implementasi CI/CD menggunakan Docker, menerapkan pengujian unit dasar dengan Jest, dan melakukan deployment aplikasi.",
+    },
+    technologies: ["JavaScript", "Vue.js", "Figma", "Docker", "Jest", "Deployment"],
+    category: "frontend",
+    github: "https://github.com/mulyadi4/ecommerce-catalog",
+  },
     
   ];
 

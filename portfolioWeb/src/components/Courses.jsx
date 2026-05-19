@@ -23,11 +23,11 @@ const CourseCard = ({ course }) => {
       <div className="flex justify-between items-start mb-4">
         <div>
           <h3 className="text-xl font-semibold text-gray-300">
-            {course.company[language]}
+            {course.company}
           </h3>
           <div className="flex items-center gap-1 text-gray-500">
             <MapPin size={16} />
-            <p>{course.location[language]}</p>
+            <p>{course.location}</p>
           </div>
         </div>
         <div className="flex items-center gap-1 text-gray-300 text-sm">
@@ -39,7 +39,8 @@ const CourseCard = ({ course }) => {
       {/* Detail Program */}
       <div className="mb-4">
         <p className="font-medium text-gray-300">
-          {course.role[language]} • GPA: {course.gpa}
+           {course.role}
+         {course.gpa && ` • GPA: ${course.gpa}`}
         </p>
       </div>
 
@@ -91,55 +92,126 @@ function Courses() {
     },
   };
 
-  const courses = [
-    {
-      company: {
-        en: "Harisenin.com",
-        id: "Harisenin.com",
-      },
-      location: {
-        en: "Jakarta, Indonesia",
-        id: "Jakarta, Indonesia",
-      },
-      duration: {
-        en: "Feb, 2024 - July, 2024",
-        id: "Februari 2024 - Juli 2024",
-      },
-      role: {
-        en: "Full Stack Developer Bootcamp",
-        id: "Bootcamp Full Stack Developer",
-      },
-      gpa: "3.40/4.00",
-      description: {
-        en: "Developed a clone of the Periplus website using React.js for the frontend, Express.js for the backend, and PostgreSQL as the database.",
-        id: "Mengembangkan kloning website Periplus menggunakan React.js untuk frontend, Express.js untuk backend, dan PostgreSQL sebagai basis data.",
-      },
-      coursework: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Tailwind CSS",
-        "React",
-        "Node.js",
-        "Express.js",
-        "PostgreSQL",
-        "MySQL",
-      ],
-      final_project_title: {
-        en: "Final Project:",
-        id: "Proyek Akhir:",
-      },
-      coursework_title: {
-        en: "Course materials:",
-        id: "Materi kursus::",
-      },
-      view_certificate: {
-        en: "View Certificate",
-        id: "Lihat Sertifikat",
-      },
-      link: "https://tinyurl.com/fsd11mulyadi",
+ const courses = [
+  {
+    company: "Harisenin.com",
+    location: "Jakarta, Indonesia",
+    duration: {
+      en: "Feb, 2024 - July, 2024",
+      id: "Februari 2024 - Juli 2024",
     },
-  ];
+    role:"Bootcamp Full Stack Developer",
+    gpa: "3.40/4.00",
+    description: {
+      en: "Developed a clone of the Periplus website using React.js for the frontend, Express.js for the backend, and PostgreSQL as the database.",
+      id: "Mengembangkan kloning website Periplus menggunakan React.js untuk frontend, Express.js untuk backend, dan PostgreSQL sebagai basis data.",
+    },
+    coursework: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "React",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "MySQL",
+    ],
+    final_project_title: {
+      en: "Final Project:",
+      id: "Proyek Akhir:",
+    },
+    coursework_title: {
+      en: "Course materials:",
+      id: "Materi kursus:",
+    },
+    view_certificate: {
+      en: "View Certificate",
+      id: "Lihat Sertifikat",
+    },
+    link: "https://tinyurl.com/fsd11mulyadi",
+  },
+
+  {
+    company: "Dicoding Indonesia",
+    location: "Online",
+    duration: {
+      en: "Feb, 2026",
+      id: "Februari 2026",
+    },
+    role:"Belajar Back-End Pemula dengan JavaScript",
+    
+   description:{
+      en: "Developed a Bookshelf REST API using Express.js and Node.js with CRUD functionality, query parameter filtering, request validation, unique ID generation using nanoid, and ESLint implementation based on Dicoding submission standards.",
+      id: "Mengembangkan Bookshelf REST API menggunakan Express.js dan Node.js dengan fitur CRUD, filtering query parameter, validasi request, pembuatan ID unik menggunakan nanoid, serta implementasi ESLint berdasarkan standar submission Dicoding.",
+    },
+   coursework: [
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "CRUD",
+      "HTTP",
+      "nanoid",
+      "Postman",
+      "ESLint",
+    ],
+    final_project_title: {
+      en: "Final Project:",
+      id: "Proyek Akhir:",
+    },
+    coursework_title: {
+      en: "Course materials:",
+      id: "Materi kursus:",
+    },
+    view_certificate: {
+      en: "View Certificate",
+      id: "Lihat Sertifikat",
+    },
+    link: "https://tinyurl.com/dibemulyadi",
+  },
+
+    {
+    company: "Dicoding Indonesia",
+    location: "Online",
+    duration: {
+      en: "Mar, 2026",
+      id: "Maret 2026",
+    },
+    role: "Belajar Membuat Front-End Web untuk Pemula",
+   
+    description: {
+      en: "Built a Bookshelf App with add, search, edit, delete, and read-status toggle features, using localStorage for data persistence.",
+      id: "Membangun Bookshelf App dengan fitur tambah, cari, edit, hapus, dan ubah status baca, serta menggunakan localStorage untuk penyimpanan data.",
+    },
+    coursework: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "DOM Manipulation",
+      "Event Handling",
+      "localStorage",
+      "CRUD",
+      "Form Validation",
+    ],
+    final_project_title: {
+      en: "Final Project:",
+      id: "Proyek Akhir:",
+    },
+    coursework_title: {
+      en: "Course materials:",
+      id: "Materi kursus:",
+    },
+    view_certificate: {
+      en: "View Certificate",
+      id: "Lihat Sertifikat",
+    },
+    link: "https://tinyurl.com/difemulyadi",
+  },
+
+ 
+  
+];
 
   return (
     <section
